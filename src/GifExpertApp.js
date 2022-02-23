@@ -1,28 +1,26 @@
 import React, { useState } from 'react'
+import { AddCategory } from './components/AddCategory';
 
 export const GifExpertApp = () => {
 
-    //const categories = ['One punch', 'Samurai X', 'Dragon Ball'] 
-    
     const [categories, setCategories] = useState(['One punch', 'Samurai X', 'Dragon Ball']);
 
-    const handleAdd = () =>{
-        //setCategories([...categories, 'HunterXHunter']);
-        setCategories(cats => [...categories, 'HunterXHunter']);
-    
-    }
+    //const handleAdd = () =>{
+    //   //setCategories([...categories, 'HunterXHunter']);
+    //    setCategories(cats => [...categories, 'HunterXHunter']);
+    //}
 
 
 
   return (
     <>
-        <h1>
+        <h2>
             GifExpertApp
-        </h1>
+        </h2>
+        <AddCategory />
         <hr />
         
-        <button onClick={handleAdd}>Agregar</button>
-
+        
         <ol>
             {
                 categories.map( category => {
